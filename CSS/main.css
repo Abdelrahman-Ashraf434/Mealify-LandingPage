@@ -6,6 +6,7 @@
   padding: 0;
   scroll-behavior: smooth;
 }
+
 ::-webkit-scrollbar {
   width: 12px;
   background-color: #fff;
@@ -17,20 +18,139 @@
   box-shadow: 0px 0px 10px 0px #eeeeee8c inset;
   border-radius: 50px;
 }
-body {
+ul {
+  list-style: none;
+  padding-left: 0;
 }
-.parent {
-  background-color: tomato;
-  height: 800px;
+a {
+  text-decoration: none;
+}
+.header {
+  height: 100vh;
+  background-color: rgb(238, 238, 238);
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.header-content {
+  width: 100%;
+  text-align: center;
+}
+.header-content h1 {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+}
+.header-content p {
+  font-size: 1rem;
+  font-family: system-ui;
+}
+.header-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-  gap: 30px 20px;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  align-items: center;
+  row-gap: 20px;
+  padding-top: 50px;
 }
-.child {
-  background-color: lightblue;
-  width: 25%;
+.header-img {
+  width: 85%;
+}
+.header-img img {
+  width: 100%;
+  filter: drop-shadow(4px 4px 9px #000a);
+}
+.video-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0px 15px;
+  margin-top: 20px;
+}
+.video-btn a:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 10px;
+}
+
+.video-btn a:first-of-type {
+  background-color: rgb(206, 18, 18);
+  padding: 10px 25px;
+  width: 140px;
+  color: white;
+  /* border-radius: 0px 100vh 100vh; */
+  border-radius: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+.video-btn a:last-of-type {
+  color: rgb(33, 37, 41);
+  transition: all 0.3s ease-in-out;
+  margin-top: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+}
+
+.video-btn a:first-of-type:hover {
+  background-color: rgb(230, 20, 20);
+}
+.video-btn a:last-of-type:hover {
+  color: rgb(206, 18, 18);
+}
+.icon {
+  width: 55px;
+  background-color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 50%;
+  border-left: 5px solid rgb(206, 18, 18);
+}
+.icon:hover i {
+  color: rgb(206, 18, 18);
+  transition: all 0.3s;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 70%;
+    margin: auto;
+  }
+  .header-content {
+    text-align: left;
+    width: 40%;
+  }
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+  .header-img {
+    width: 40%;
+  }
+  .header-content h1 {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-size: 4.5rem;
+  }
+  .header-content p {
+    font-family: system-ui;
+    padding: 15px 0px;
+  }
+  .video-btn {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .video-btn a:first-of-type {
+    border-radius: 0px 100vh 100vh;
+  }
+  .video-btn a:last-of-type {
+    margin: 0;
+  }
 }
