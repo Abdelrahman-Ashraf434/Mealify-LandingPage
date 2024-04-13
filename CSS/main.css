@@ -18,5 +18,19 @@
   border-radius: 50px;
 }
 body {
+}
+.parent {
+  background-color: tomato;
   height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 30px 20px;
+}
+.child {
+  background-color: lightblue;
+  width: 25%;
 }
