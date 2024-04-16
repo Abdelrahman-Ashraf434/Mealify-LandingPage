@@ -6,7 +6,6 @@
   padding: 0;
   scroll-behavior: smooth;
 }
-
 ::-webkit-scrollbar {
   width: 12px;
   background-color: #fff;
@@ -179,7 +178,7 @@ ul:first-of-type li:first-child a {
 .chef-cards-wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: 2rem;
 }
 .title h2 {
   font-size: 14px;
