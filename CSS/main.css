@@ -34,7 +34,7 @@ a {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   text-decoration: none;
-  color: rgb(33, 37, 41);
+  color: white;
 }
 .nav-bar {
   background-color: white;
@@ -44,6 +44,7 @@ a {
   position: fixed;
   padding: 20px;
   z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .nav-wrapper {
   display: flex;
@@ -59,14 +60,19 @@ ul:first-of-type {
   align-items: flex-start;
 }
 ul:first-of-type li a {
-  color: rgb(127, 127, 144);
+  color: white;
   font-size: 17px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
 }
+ul:first-of-type li:first-child a {
+  color: #000000;
+  border-bottom: 2px solid rgb(206, 18, 18);
+}
 .nav-icon i {
   font-size: 1.5rem;
+  color: white;
 }
 .nav-icon {
   align-self: flex-end;
@@ -84,7 +90,7 @@ ul:first-of-type li a {
   padding-bottom: 50px;
 }
 .container {
-  width: 81%;
+  width: 89%;
   margin: 0 auto;
 }
 .header-content {
@@ -175,17 +181,95 @@ ul:first-of-type li a {
   flex-direction: column;
   row-gap: 1rem;
 }
+.title h2 {
+  font-size: 14px;
+  color: rgb(127, 127, 144);
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  padding-top: 4rem;
+}
+.title p:nth-child(2) {
+  font-size: 50px;
+  font-family: "Amatic Sc", sans-serif;
+  color: rgb(33, 37, 41);
+  padding-bottom: 2rem;
+}
+.title p span {
+  color: rgb(206, 18, 18);
+}
 .chef-card {
   box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
   background-color: white;
   border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
 }
 .chef-img {
   border-radius: 0.5rem;
   position: relative;
+  overflow: hidden;
 }
 .chef-img img {
   width: 100%;
+}
+.chef-social {
+  position: absolute;
+  right: -4rem;
+  top: 3rem;
+  left: 100%;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 9px;
+  background-color: #ffffff4d;
+  width: 16%;
+  height: 50%;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  transition: all 0.8s ease-in-out;
+}
+.chef-img:hover .chef-social {
+  left: 80%;
+}
+.chef-social a i {
+  font-size: 1.125rem;
+  padding: 0.625rem 0.3125rem;
+  color: #37373f66;
+  transition: all 0.3s;
+}
+.chef-social a i:hover {
+  color: rgb(33, 37, 41);
+}
+.chef-content {
+  padding: 1rem;
+}
+.chef-content h3 {
+  font-size: 19px;
+  color: rgb(33, 37, 41);
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+}
+.chef-content p {
+  color: rgb(127, 127, 144);
+  display: block;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  padding: 0.6rem 0;
+}
+.chef-content span {
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  color: rgb(127, 127, 144);
+  margin: 6px 0 4px;
+  display: inline-block;
+}
+.chef-card:hover {
+  scale: 1.07;
+  transition: all 0.3s ease-in-out;
 }
 @media (min-width: 1024px) {
   .container {
@@ -237,6 +321,10 @@ ul:first-of-type li a {
   .nav-bar {
     width: 100%;
     padding: 20px;
+    background-color: white;
+  }
+  .nav-wrapper .logo a:nth-of-type(1) {
+    color: rgb(33, 37, 41);
   }
   .nav-wrapper {
     display: flex;
@@ -251,10 +339,25 @@ ul:first-of-type li a {
     column-gap: 27px;
     align-items: center;
   }
+  ul:first-of-type li a {
+    color: rgb(127, 127, 144);
+  }
+  ul:first-of-type li:first-child a {
+    color: #000;
+    border-bottom: 2px solid rgb(206, 18, 18);
+  }
   .nav-icon {
     align-self: center;
     order: 0;
     position: relative;
     padding: 0px;
+  }
+  .nav-icon i {
+    font-size: 1.5rem;
+    color: black;
+  }
+  .chef-cards-wrapper {
+    flex-direction: row;
+    column-gap: 2rem;
   }
 }
