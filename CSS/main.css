@@ -196,6 +196,9 @@ h3 {
   transition: all 0.3s;
 }
 /**/
+.chef-cards {
+  padding-bottom: 5rem;
+}
 .chef-cards-wrapper {
   display: flex;
   flex-direction: column;
@@ -248,7 +251,7 @@ h3 {
   border-radius: 0.3rem;
   transition: all 0.8s ease-in-out;
 }
-.chef-img:hover .chef-social {
+.chef-card:hover .chef-social {
   left: 80%;
 }
 .chef-social a i {
@@ -294,6 +297,7 @@ h3 {
 /**/
 .gallery {
   background-color: rgb(238, 238, 238);
+  padding-bottom: 4rem;
 }
 .gallery-wrapper {
   display: flex;
@@ -306,8 +310,12 @@ h3 {
 }
 .gallery-card img {
   width: 100%;
+  display: block;
 }
-/**/
+/*C*/
+.contact-us {
+  padding-bottom: 4rem;
+}
 form {
   background-color: #fff;
   box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
@@ -480,7 +488,7 @@ form button {
   margin-top: 0.625rem;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 1.25rem;
+  column-gap: 0.25rem;
   margin-left: 2px;
   margin-bottom: 1rem;
 }
@@ -632,7 +640,7 @@ form button {
   }
   .contact-info {
     flex-direction: row;
-    gap: 1rem;
+    gap: 0.6rem;
   }
   .contact-info .address,
   .contact-info .email,
@@ -649,7 +657,7 @@ form button {
     width: 29%;
   }
   .email-input input {
-    width: 85%;
+    width: 83%;
   }
   .email-input {
     flex-direction: row;
